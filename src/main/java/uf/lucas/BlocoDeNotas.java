@@ -12,11 +12,11 @@ public class BlocoDeNotas extends Exception{
     }
 
     public List<Anotacao> getAnotacoes() {
-        return anotacoes;
+        return this.anotacoes;
     }
 
     public List<Anotacao> getExclusoes() {
-        return exclusoes;
+        return this.exclusoes;
     }
 
     public boolean adicionarAnotacao(Anotacao anotacao) {
