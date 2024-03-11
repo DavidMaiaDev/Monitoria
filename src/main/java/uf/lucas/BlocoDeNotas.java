@@ -6,9 +6,10 @@ public class BlocoDeNotas extends Exception{
     private List<Anotacao> anotacoes;
     private List<Anotacao> exclusoes;
 
+
     public BlocoDeNotas() {
         this.anotacoes = new ArrayList<>();
-        this.exclusoes = new ArrayList<>();
+        this.exclusoes = null;
     }
 
     public List<Anotacao> getAnotacoes() {
@@ -34,6 +35,9 @@ public class BlocoDeNotas extends Exception{
     }
 
     public boolean removerAnotacao(int numeroIdentificacao) throws Exception {
+        if (exclusoes == null) {
+            this.exclusoes = new ArrayList<>();
+        }
         if(this.anotacoes.isEmpty()) throw new Exception("Lista está vazia!");
 
         for(Anotacao a : this.anotacoes) {
@@ -56,16 +60,17 @@ public class BlocoDeNotas extends Exception{
         throw new Exception("Este texto não existe!");
     }
 
-    public void listarAnotacoes() throws Exception{
+    public List<Anotacao> listarAnotacoes() throws Exception{
+        List<Anotacao> listaAuxiliar = new ArrayList<>();
         if(this.anotacoes.isEmpty()) throw new Exception("Lista está vazia!");
         System.out.println("Anotação");
         for (Anotacao anotacao : this.anotacoes) {
-            System.out.println(anotacao.toString());
+            listaAuxiliar.add(anotacao);
         }
+        return listaAuxiliar;
     }
-
     public void listarExclusoes() throws Exception{
-        if(this.anotacoes.isEmpty()) throw new Exception("Lista está vazia!");
+        if(this.exclusoes.isEmpty()) throw new Exception("Lista está vazia!");
         System.out.println("Exclusão");
         for (Anotacao anotacao : this.exclusoes) {
             System.out.println(anotacao.toString());

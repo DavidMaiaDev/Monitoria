@@ -27,10 +27,8 @@ public class Anotacao {
 
     @Override
     public String toString() {
-        return "Nota{" +
-                "numeroIdentificacao=" + this.id +
-                ", texto='" + this.text + '\'' +
-                ", dataCriacao=" + this.dataCriacao +
-                '}';
+        return "\nID: " + this.id +
+                "\nTexto: " + this.text +
+                "\nData de Criação: " + this.dataCriacao+"\n";
     }
 }

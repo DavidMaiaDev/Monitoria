@@ -12,11 +12,13 @@ public class Main {
             blocoDeNotas.adicionarAnotacao(anotacao);
             blocoDeNotas.adicionarAnotacao(anotacao2);
             blocoDeNotas.buscarAnotacoesPorTexto("Novo teste");
-            blocoDeNotas.listarAnotacoes();
-            blocoDeNotas.editarAnotacao(2, "Novo texto para teste");
-            blocoDeNotas.removerAnotacao(1);
-            blocoDeNotas.listarAnotacoes();
-            blocoDeNotas.listarExclusoes();
+            //System.out.println(blocoDeNotas.listarAnotacoes());
+            //blocoDeNotas.editarAnotacao(2, "Novo texto para teste");
+            //blocoDeNotas.removerAnotacao(1);
+            //System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
+            //System.out.println(blocoDeNotas.listarAnotacoes());
+            // blocoDeNotas.listarExclusoes();
+            //blocoDeNotas.listarExclusoes();
         } catch (Exception e) {
             System.err.println(e);
         }
